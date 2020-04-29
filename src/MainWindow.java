@@ -18,29 +18,33 @@ public class MainWindow extends JPanel{
         polygons.forEach((p) -> {
             p.paint(g);
         });
+        
+//        polygons.get(0).setAngle(polygons.get(0).getAngle() + 1);
+        polygons.get(0).angle += 0.1;
     }
 
 
     List<Polygon> polygons = new ArrayList<>() {{
         this.add(new Polygon(
-                new Point(10, 10),
+                new Point(200, 200),
+                Math.PI / 4d,
                 new Point[] {
-                        new Point(50, 50),
-                        new Point(70, 60),
-                        new Point(100, 200),
-                        new Point(100, 200),
-                        new Point(50,80)
+                        new Point(-20, -20),
+                        new Point(-20, 20),
+                        new Point(20, 20),
+                        new Point(20, -20),
+                        new Point(-20, -20)
                 }));
 
-        this.add(new Polygon(
-                new Point(15, 15),
-                new Point[] {
-                        new Point(50, 50),
-                        new Point(70, 60),
-                        new Point(100, 200),
-                        new Point(100, 200),
-                        new Point(50,80)
-                }));
+//        this.add(new Polygon(
+//                new Point(15, 15),
+//                new Point[] {
+//                        new Point(50, 50),
+//                        new Point(70, 60),
+//                        new Point(100, 200),
+//                        new Point(100, 200),
+//                        new Point(50,80)
+//                }));
     }};
     
 
