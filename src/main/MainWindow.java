@@ -1,7 +1,6 @@
-
+package main;
 
 import java.awt.*;
-import java.awt.geom.GeneralPath;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
@@ -13,14 +12,14 @@ public class MainWindow extends JPanel{
         super();
     }
 
+    @Override
     public void paintComponent(Graphics g){
 
         polygons.forEach((p) -> {
             p.paint(g);
         });
         
-//        polygons.get(0).setAngle(polygons.get(0).getAngle() + 1);
-        polygons.get(0).angle += 0.1;
+//        polygons.get(0).angle += 0.1;
     }
 
 
@@ -36,14 +35,14 @@ public class MainWindow extends JPanel{
                         new Point(-20, -20)
                 }));
 
-//        this.add(new Polygon(
-//                new Point(15, 15),
-//                new Point[] {
-//                        new Point(50, 50),
-//                        new Point(70, 60),
-//                        new Point(100, 200),
-//                        new Point(100, 200),
-//                        new Point(50,80)
+//        this.add(new main.Polygon(
+//                new main.Point(15, 15),
+//                new main.Point[] {
+//                        new main.Point(50, 50),
+//                        new main.Point(70, 60),
+//                        new main.Point(100, 200),
+//                        new main.Point(100, 200),
+//                        new main.Point(50,80)
 //                }));
     }};
     
